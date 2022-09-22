@@ -1,0 +1,12 @@
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Core\bin\Debug\net6.0\Core.deps.json
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Core\bin\Debug\net6.0\Core.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Core\bin\Debug\net6.0\Core.pdb
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Core\obj\Debug\net6.0\Core.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Core\obj\Debug\net6.0\refint\Core.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Core\obj\Debug\net6.0\Core.pdb
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Core\obj\Debug\net6.0\ref\Core.dll
