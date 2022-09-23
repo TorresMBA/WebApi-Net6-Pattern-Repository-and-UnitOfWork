@@ -1,16 +1,27 @@
 ﻿using Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace Infrastructure.Data
 {
     public class TiendaContext : DbContext
     {
-#pragma warning disable CS8618 // Un campo que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de declararlo como que admite un valor NULL.
         public TiendaContext(DbContextOptions options) : base(options)
-#pragma warning restore CS8618 // Un campo que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de declararlo como que admite un valor NULL.
         {
         }
 
         public DbSet<Producto> Productos { get; set; }
+
+        public DbSet<Marca> Marca { get; set; }
+
+        public DbSet<Categoria> Categoria { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            //Este Metodo -> ApplyConfigurationsFromAssembly va a aplicar todas las configuraciónes de todas las clases de Tipo IEntityTypeConfiguration
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
     }
 }
