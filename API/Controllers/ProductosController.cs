@@ -50,8 +50,10 @@ namespace API.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<Producto>> Post(Producto producto)
+        public async Task<ActionResult<ProductoAddUpdateDto>> Post(ProductoAddUpdateDto productoDto)
         {
+            var producto = _mapper.Map<Producto>(productoDto);
+
             _unitOfWork.Producto.Add(producto);
             await _unitOfWork.SaveAsync();
 
@@ -59,8 +61,8 @@ namespace API.Controllers
             {
                 return BadRequest();
             }
-
-            return CreatedAtAction(nameof(Post), new { id = producto.Id }, producto);
+            productoDto.Id = producto.Id;
+            return CreatedAtAction(nameof(Post), new { id = productoDto.Id }, productoDto);
         }
 
         //PUT: api/productos/4
@@ -68,15 +70,17 @@ namespace API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Producto>> Put(int id, [FromBody]Producto producto)
+        public async Task<ActionResult<ProductoAddUpdateDto>> Put(int id, [FromBody]ProductoAddUpdateDto productoDto)
         {
-            if (producto == null)
+            if (productoDto == null)
                 return NotFound();
-            
+
+            var producto = _mapper.Map<Producto>(productoDto);
+
             _unitOfWork.Producto.Update(producto);
             await _unitOfWork.SaveAsync();
 
-            return producto;
+            return productoDto;
         }
 
         //DELETE: api/productos
