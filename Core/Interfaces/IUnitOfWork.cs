@@ -14,6 +14,6 @@ namespace Core.Interfaces
 
         ICategoriaRepository Categoria { get; }
 
-        int Save();
+        Task<int> SaveAsync();
     }
 }
