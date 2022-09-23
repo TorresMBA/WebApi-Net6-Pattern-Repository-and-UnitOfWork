@@ -1,9 +1,14 @@
+using API.Extensions;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+//Se llama al metodo de extensión Extensions/ApplicationServiceExtension/ConfigureCors
+builder.Services.ConfigureCors();
+//
 
 builder.Services.AddControllers();
 
@@ -49,6 +54,8 @@ using (var scope = app.Services.CreateScope())
 	}
 }
 //
+
+app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 

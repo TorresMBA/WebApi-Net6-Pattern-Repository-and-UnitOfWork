@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class Marca : BaseEntity
+    public class BaseEntity
     {
-        public string Nombre { get; set; }
-
-        public ICollection<Producto> Productos { get; set; }
+        public int Id { get; set; }
     }
 }
