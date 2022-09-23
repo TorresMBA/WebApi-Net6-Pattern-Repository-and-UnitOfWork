@@ -41,3 +41,5 @@ D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Data\Csv\marcas.csv
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Data\Csv\productos.csv
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\CsvHelper.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\AutoMapper.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "jtb3OGeZSvBzKSWFgICP1kPXNQlGtlW8gUbLMOHcHED+cdmVfk3sB71+7l11qowtoTtazFORJXWrXufLpo3R+g==",
+  "dgSpecHash": "sdcZF5G3aR4nGPcutmHd/3hjLPdNcuR4kF9uMgdiyuBopA1j2YQ2q8YK75QxxmbZeZ9c2dMKDq2o154MwwSCrg==",
   "success": true,
   "projectFilePath": "D:\\Personal\\Documentos\\Visual Studio 2022\\Projects\\WebAPI\\StoreAPICourse\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\bryan\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\bryan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\bryan\\.nuget\\packages\\csvhelper\\28.0.1\\csvhelper.28.0.1.nupkg.sha512",
     "C:\\Users\\bryan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\bryan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\bryan\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.9\\microsoft.entityframeworkcore.6.0.9.nupkg.sha512",
     "C:\\Users\\bryan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.9\\microsoft.entityframeworkcore.abstractions.6.0.9.nupkg.sha512",
     "C:\\Users\\bryan\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.9\\microsoft.entityframeworkcore.analyzers.6.0.9.nupkg.sha512",

@@ -1,13 +1,18 @@
 using API.Extensions;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+//Automapper config
+builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
+
 //Se llama al metodo de extensión Extensions/ApplicationServiceExtension/ConfigureCors
 builder.Services.ConfigureCors();
+builder.Services.AddAplicacionServices();
 //
 
 builder.Services.AddControllers();

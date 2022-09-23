@@ -1,4 +1,8 @@
-﻿namespace API.Extensions
+﻿using Core.Interfaces;
+using Infrastructure.Repositories;
+using Infrastructure.UnitOfWork;
+
+namespace API.Extensions
 {
     public static class ApplicationServiceExtensions
     {
@@ -15,6 +19,17 @@
                     .AllowAnyHeader();       // WithHeader("accept", "content-type")
                 });
             });
+        }
+
+        public static void AddAplicacionServices(this IServiceCollection services)
+        {
+            //En caso que utilice un repositorio generico que no este en el unit of work descomentar esta linea *
+            //*services.AddScoped(typeof(IGenericRepositoy<>), typeof(GenericRepository<>));
+
+            //services.AddScoped<IProductoRepository, ProductoRepository>();
+            //services.AddScoped<IMarcaRepository, MarcaRepository>();
+            //services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }
 }
