@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "CsvHelper/28.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore/6.0.9": {
         "type": "package",
         "dependencies": {
@@ -324,6 +337,30 @@
     }
   },
   "libraries": {
+    "CsvHelper/28.0.1": {
+      "sha512": "T/Eid0mP/GeWV1RcxmUPSsBCtOm6wHbFII6iFydPfpIa6cd+siec0KGrLq5uabI8sH6crFi84OA1vNLkp8Lzlw==",
+      "type": "package",
+      "path": "csvhelper/28.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "csvhelper.28.0.1.nupkg.sha512",
+        "csvhelper.nuspec",
+        "lib/net45/CsvHelper.dll",
+        "lib/net45/CsvHelper.xml",
+        "lib/net47/CsvHelper.dll",
+        "lib/net47/CsvHelper.xml",
+        "lib/net5.0/CsvHelper.dll",
+        "lib/net5.0/CsvHelper.xml",
+        "lib/net6.0/CsvHelper.dll",
+        "lib/net6.0/CsvHelper.xml",
+        "lib/netstandard2.0/CsvHelper.dll",
+        "lib/netstandard2.0/CsvHelper.xml",
+        "lib/netstandard2.1/CsvHelper.dll",
+        "lib/netstandard2.1/CsvHelper.xml"
+      ]
+    },
     "Microsoft.EntityFrameworkCore/6.0.9": {
       "sha512": "3QxYF6TR14O3cSZitdzM10Smsw+hweLXyB45PN4ZVjrX4GqzUoGZ0ZC06r0ST7O7SgYxNjxw34ay5XXbBTX86A==",
       "type": "package",
@@ -732,6 +769,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Core >= 1.0.0",
+      "CsvHelper >= 28.0.1",
       "Microsoft.EntityFrameworkCore >= 6.0.9",
       "Pomelo.EntityFrameworkCore.MySql >= 6.0.2"
     ]
@@ -779,6 +817,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "CsvHelper": {
+            "target": "Package",
+            "version": "[28.0.1, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.9, )"

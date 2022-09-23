@@ -38,6 +38,9 @@ using (var scope = app.Services.CreateScope())
 	{
 		var context = services.GetRequiredService<TiendaContext>();
 		await context.Database.MigrateAsync();
+
+		//Llamada a este metodo para crear información desde un csv y la inyección y ejecución de esta
+		await TiendaContextSeed.SeedAsync(context, loggerFactory);
 	}
 	catch (Exception ex)
 	{

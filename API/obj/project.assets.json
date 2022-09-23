@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "CsvHelper/28.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -446,6 +459,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Core": "1.0.0",
+          "CsvHelper": "28.0.1",
           "Microsoft.EntityFrameworkCore": "6.0.9",
           "Pomelo.EntityFrameworkCore.MySql": "6.0.2"
         },
@@ -459,6 +473,30 @@
     }
   },
   "libraries": {
+    "CsvHelper/28.0.1": {
+      "sha512": "T/Eid0mP/GeWV1RcxmUPSsBCtOm6wHbFII6iFydPfpIa6cd+siec0KGrLq5uabI8sH6crFi84OA1vNLkp8Lzlw==",
+      "type": "package",
+      "path": "csvhelper/28.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "csvhelper.28.0.1.nupkg.sha512",
+        "csvhelper.nuspec",
+        "lib/net45/CsvHelper.dll",
+        "lib/net45/CsvHelper.xml",
+        "lib/net47/CsvHelper.dll",
+        "lib/net47/CsvHelper.xml",
+        "lib/net5.0/CsvHelper.dll",
+        "lib/net5.0/CsvHelper.xml",
+        "lib/net6.0/CsvHelper.dll",
+        "lib/net6.0/CsvHelper.xml",
+        "lib/netstandard2.0/CsvHelper.dll",
+        "lib/netstandard2.0/CsvHelper.xml",
+        "lib/netstandard2.1/CsvHelper.dll",
+        "lib/netstandard2.1/CsvHelper.xml"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",

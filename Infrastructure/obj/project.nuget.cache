@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "aJSJuqtA1AWVd2VK003UzPqNvx87/d78gnUEPPVR2aVziLGMR0ZZoAewJ76u0WNSlG6TKZuCiyXeh2123QXpLw==",
+  "dgSpecHash": "nNZwfO1IrvgNzjQfDBaR0j3otdsttcvFiuGe+IKZajR9PSqwWRh7hEONXD7Xhw13bQfzrTLZ+XHM52xLg4yMKA==",
   "success": true,
   "projectFilePath": "D:\\Personal\\Documentos\\Visual Studio 2022\\Projects\\WebAPI\\StoreAPICourse\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\bryan\\.nuget\\packages\\csvhelper\\28.0.1\\csvhelper.28.0.1.nupkg.sha512",
     "C:\\Users\\bryan\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.9\\microsoft.entityframeworkcore.6.0.9.nupkg.sha512",
     "C:\\Users\\bryan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.9\\microsoft.entityframeworkcore.abstractions.6.0.9.nupkg.sha512",
     "C:\\Users\\bryan\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.9\\microsoft.entityframeworkcore.analyzers.6.0.9.nupkg.sha512",

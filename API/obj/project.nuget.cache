@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VLDXzCTtLs3hEEdNovXn5GFsoOlwJbWiNcyBxepW0Jc7tnmdKmUJPO9slUCpQYXHFxVGweJMptdEo3pgMuLpnA==",
+  "dgSpecHash": "jtb3OGeZSvBzKSWFgICP1kPXNQlGtlW8gUbLMOHcHED+cdmVfk3sB71+7l11qowtoTtazFORJXWrXufLpo3R+g==",
   "success": true,
   "projectFilePath": "D:\\Personal\\Documentos\\Visual Studio 2022\\Projects\\WebAPI\\StoreAPICourse\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\bryan\\.nuget\\packages\\csvhelper\\28.0.1\\csvhelper.28.0.1.nupkg.sha512",
     "C:\\Users\\bryan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\bryan\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.9\\microsoft.entityframeworkcore.6.0.9.nupkg.sha512",
     "C:\\Users\\bryan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.9\\microsoft.entityframeworkcore.abstractions.6.0.9.nupkg.sha512",

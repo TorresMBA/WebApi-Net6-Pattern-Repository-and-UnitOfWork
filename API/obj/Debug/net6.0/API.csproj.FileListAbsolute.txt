@@ -37,3 +37,7 @@ D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\obj
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\obj\Debug\net6.0\API.pdb
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\obj\Debug\net6.0\ref\API.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Data\Csv\categorias.csv
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Data\Csv\marcas.csv
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Data\Csv\productos.csv
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\CsvHelper.dll
