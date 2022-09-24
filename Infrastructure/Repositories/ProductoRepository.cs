@@ -30,5 +30,19 @@ namespace Infrastructure.Repositories
                         .Include(p => p.Categoria)
                         .ToListAsync();
         }
+
+        public virtual async Task<(int totalRegistros, IEnumerable<Producto> registros)> GetAllAsync(int pageIndex, int pageSize)
+        {
+            var totalRegistros = await _tiendaContext.Productos.CountAsync();
+
+            var registros = await _tiendaContext.Productos
+                                .Include(p => p.Marca)
+                                .Include(p => p.Categoria)  
+                                .Skip((pageIndex - 1) * pageSize)
+                                .Take(pageSize)
+                                .ToListAsync();
+
+            return (totalRegistros, registros);
+        }
     }
 }

@@ -11,6 +11,8 @@ namespace Core.Interfaces
 
         IEnumerable<T> Find(Expression<Func<T, bool>> expression);
 
+        Task<(int totalRegistros, IEnumerable<T> registros)> GetAllAsync(int pageIndex, int pageSize);
+
         void Add(T entity);
 
         void AddRange(IEnumerable<T> entities);
