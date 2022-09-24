@@ -40,7 +40,7 @@ namespace Infrastructure.Repositories
             return await _tiendaContext.Set<T>().ToListAsync();
         }
 
-        public virtual async Task<(int totalRegistros, IEnumerable<T> registros)> GetAllAsync(int pageIndex, int pageSize)
+        public virtual async Task<(int totalRegistros, IEnumerable<T> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
         {
             var totalRegistros = await _tiendaContext.Set<T>().CountAsync();
 
