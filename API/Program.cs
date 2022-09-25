@@ -10,9 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 //Automapper config
 builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
 
-//Se llama al metodo de extensión Extensions/ApplicationServiceExtension/ConfigureCors
+//Se llama a los metodo de extensión Extensions/ApplicationServiceExtension.cs
 builder.Services.ConfigureCors();
 builder.Services.AddAplicacionServices();
+builder.Services.AddJwt(builder.Configuration);
 //
 
 builder.Services.AddControllers();
