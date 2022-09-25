@@ -1,6 +1,9 @@
-﻿using Core.Interfaces;
+﻿using API.Service;
+using Core.Entities;
+using Core.Interfaces;
 using Infrastructure.Repositories;
 using Infrastructure.UnitOfWork;
+using Microsoft.AspNetCore.Identity;
 
 namespace API.Extensions
 {
@@ -29,6 +32,8 @@ namespace API.Extensions
             //services.AddScoped<IProductoRepository, ProductoRepository>();
             //services.AddScoped<IMarcaRepository, MarcaRepository>();
             //services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+            services.AddScoped<IPasswordHasher<Usuario>, PasswordHasher<Usuario>>();
+            services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }

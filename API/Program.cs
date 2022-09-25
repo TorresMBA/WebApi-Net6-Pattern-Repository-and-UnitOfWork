@@ -65,6 +65,10 @@ app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 
+//Middwlare de autenticación y siempre debe ir antes el de authorizacion (vino por defecto en el program el authorizacion)
+app.UseAuthentication();
+// 
+
 app.UseAuthorization();
 
 app.MapControllers();
