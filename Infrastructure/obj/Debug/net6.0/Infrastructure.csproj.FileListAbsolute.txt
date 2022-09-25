@@ -16,3 +16,5 @@ D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Infrast
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Infrastructure\bin\Debug\net6.0\Data\Csv\categorias.csv
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Infrastructure\bin\Debug\net6.0\Data\Csv\marcas.csv
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Infrastructure\bin\Debug\net6.0\Data\Csv\productos.csv
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Infrastructure\bin\Debug\net6.0\Infrastructure.runtimeconfig.json
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache

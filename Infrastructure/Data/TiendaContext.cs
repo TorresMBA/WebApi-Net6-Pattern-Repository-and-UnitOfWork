@@ -17,6 +17,10 @@ namespace Infrastructure.Data
 
         public DbSet<Categoria> Categoria { get; set; }
 
+        public DbSet<Usuario> Usuarios { get; set; }
+
+        public DbSet<Rol> Roles { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
