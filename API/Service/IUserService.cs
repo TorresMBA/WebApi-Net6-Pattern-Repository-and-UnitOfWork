@@ -5,5 +5,7 @@ namespace API.Service
     public interface IUserService
     {
         Task<string> RegisterAsync(RegisterDto registerDto);
+
+        Task<DatoUsuarioDto> GetTokenAsync(LoginDto loginDto);
     }
 }

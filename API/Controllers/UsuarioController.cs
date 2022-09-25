@@ -20,5 +20,13 @@ namespace API.Controllers
 
             return Ok(result);
         }
+
+        [HttpPost("login")]
+        public async Task<ActionResult> GetTokenAsync(LoginDto loginDto)
+        {
+            var result = await _userService.GetTokenAsync(loginDto);
+
+            return Ok(result);
+        }
     }
 }
