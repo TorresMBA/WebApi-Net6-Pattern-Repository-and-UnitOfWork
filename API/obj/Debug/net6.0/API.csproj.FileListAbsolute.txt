@@ -43,3 +43,11 @@ D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\CsvHelper.dll
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\AutoMapper.dll
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
