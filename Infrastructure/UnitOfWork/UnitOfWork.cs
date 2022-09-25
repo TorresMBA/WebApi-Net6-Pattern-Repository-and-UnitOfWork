@@ -20,6 +20,10 @@ namespace Infrastructure.UnitOfWork
 
         private ICategoriaRepository _categoria;
 
+        private IRolRepository _roles;
+
+        private IUsuarioRepository _usuarios;
+
         public IProductoRepository Producto
         {
             get
@@ -53,6 +57,30 @@ namespace Infrastructure.UnitOfWork
                     _categoria = new CategoriaRepository(_context);
                 }
                 return _categoria;
+            }
+        }
+
+        public IUsuarioRepository Usuario
+        {
+            get
+            {
+                if (_usuarios == null)
+                {
+                    _usuarios = new UsuarioRepository(_context);
+                }
+                return _usuarios;
+            }
+        }
+
+        public IRolRepository Rol
+        {
+            get
+            {
+                if (_roles == null)
+                {
+                    _roles = new RolRepository(_context);
+                }
+                return _roles;
             }
         }
 
