@@ -22,6 +22,8 @@ namespace Core.Entities
 
         public ICollection<Rol> Roles { get; set; } = new HashSet<Rol>();
 
+        public ICollection<RefreshToken> RefreshTokens { get; set; } = new HashSet<RefreshToken>();
+
         public ICollection<UsuarioRoles> UsuariosRoles { get; set; }
     }
 }
