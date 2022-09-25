@@ -7,5 +7,7 @@ namespace API.Service
         Task<string> RegisterAsync(RegisterDto registerDto);
 
         Task<DatoUsuarioDto> GetTokenAsync(LoginDto loginDto);
+
+        Task<string> AddRoleAsync(AddRoleDto addRoleDto);
     }
 }

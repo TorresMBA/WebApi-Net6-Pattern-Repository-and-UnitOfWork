@@ -8,6 +8,7 @@ namespace API.Controllers
     public class UsuarioController : BaseApiController
     {
         private readonly IUserService _userService;
+
         public UsuarioController(IUserService userService)
         {
             _userService = userService;
@@ -25,6 +26,14 @@ namespace API.Controllers
         public async Task<ActionResult> GetTokenAsync(LoginDto loginDto)
         {
             var result = await _userService.GetTokenAsync(loginDto);
+
+            return Ok(result);
+        }
+
+        [HttpPost("addrole")]
+        public async Task<ActionResult> AddRoleAsync(AddRoleDto addRoleDto)
+        {
+            var result = await _userService.AddRoleAsync(addRoleDto);
 
             return Ok(result);
         }

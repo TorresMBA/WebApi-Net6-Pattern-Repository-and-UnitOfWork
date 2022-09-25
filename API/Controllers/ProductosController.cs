@@ -4,11 +4,13 @@ using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
 using Infrastructure.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
+    [Authorize(Roles = "Administrador")]
     public class ProductosController : BaseApiController
     {
         private readonly IUnitOfWork _unitOfWork;

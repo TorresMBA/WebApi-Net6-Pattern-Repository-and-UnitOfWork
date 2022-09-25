@@ -111,7 +111,6 @@ namespace API.Service
                 return $"No existe algún usuario registrado con la cuenta {model.Username}.";
             }
 
-
             var resultado = _passwordHasher.VerifyHashedPassword(usuario, usuario.Password, model.Password);
 
             if (resultado == PasswordVerificationResult.Success)
