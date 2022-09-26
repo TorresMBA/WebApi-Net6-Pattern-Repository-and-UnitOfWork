@@ -17,10 +17,14 @@ namespace API.Controllers
 
         private readonly IMapper _mapper;
 
-        public ProductosController(IUnitOfWork unitOfWork, IMapper mapper)
+        private readonly ILogger<ProductosController> _logger;
+
+        public ProductosController(IUnitOfWork unitOfWork, IMapper mapper, ILogger<ProductosController> logger)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _logger = logger;
+            _logger.LogInformation("Estamos en el constructor de 'ProductosController'");
         }
 
         [HttpGet]

@@ -1,9 +1,22 @@
 using API.Extensions;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var logger = new LoggerConfiguration()
+	.ReadFrom.Configuration(builder.Configuration)
+	.Enrich.FromLogContext()
+	.CreateLogger();
+
+//Limpiar por defecto los proveedores de logger en netcore
+//builder.Logging.ClearProviders();
+
+//Aagrega serliog al contexto de net core como logger serilog
+builder.Logging.AddSerilog(logger);
+					
 
 // Add services to the container.
 
@@ -56,8 +69,8 @@ using (var scope = app.Services.CreateScope())
 	}
 	catch (Exception ex)
 	{
-		var logger = loggerFactory.CreateLogger<Program>();
-		logger.LogError(ex, "Ocurrió un problema durante la migración.");
+		var _logger = loggerFactory.CreateLogger<Program>();
+		_logger.LogError(ex, "Ocurrió un problema durante la migración.");
 	}
 }
 //

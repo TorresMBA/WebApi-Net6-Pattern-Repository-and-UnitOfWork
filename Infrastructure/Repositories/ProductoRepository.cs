@@ -31,7 +31,7 @@ namespace Infrastructure.Repositories
                         .ToListAsync();
         }
 
-        public virtual async Task<(int totalRegistros, IEnumerable<Producto> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
+        public override async Task<(int totalRegistros, IEnumerable<Producto> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
         {
             var consulta = _tiendaContext.Productos as IQueryable<Producto>;
 
