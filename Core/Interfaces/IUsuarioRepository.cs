@@ -10,5 +10,7 @@ namespace Core.Interfaces
     public interface IUsuarioRepository : IGenericRepositoy<Usuario>
     {
         Task<Usuario> GetByUsernameAsync(string username);
+
+        Task<Usuario> GetByRefreshTokenAsync(string refreshToken);
     }
 }

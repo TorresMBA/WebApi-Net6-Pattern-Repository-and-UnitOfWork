@@ -16,10 +16,19 @@ namespace Infrastructure.Repositories
         {
         }
 
+        public async Task<Usuario> GetByRefreshTokenAsync(string refreshToken)
+        {
+            return await _tiendaContext.Usuarios
+                                            .Include(u => u.Roles)
+                                            .Include(u => u.RefreshTokens)
+                                            .FirstOrDefaultAsync(u => u.RefreshTokens.Any(t => t.Token == refreshToken));
+        }
+
         public async Task<Usuario> GetByUsernameAsync(string username)
         {
             return await _tiendaContext.Usuarios
                                             .Include(u => u.Roles)
+                                            .Include(u => u.RefreshTokens)
                                             .FirstOrDefaultAsync(u => u.Username.ToLower() == username.ToLower());
         }
     }
