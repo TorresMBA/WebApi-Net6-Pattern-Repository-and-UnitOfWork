@@ -51,3 +51,13 @@ D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Serilog.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Serilog.AspNetCore.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\bin\Debug\net6.0\Serilog.Sinks.File.dll

@@ -1,0 +1,282 @@
+[ 2022-09-25 20:09:54.492 -05:00 INF] Entity Framework Core 6.0.9 initialized 'TiendaContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.2' with options: ServerVersion 8.0.28-mysql  
+[ 2022-09-25 20:09:55.137 -05:00 INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='TiendaApi' AND TABLE_NAME='__EFMigrationsHistory'; 
+[ 2022-09-25 20:09:55.204 -05:00 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='TiendaApi' AND TABLE_NAME='__EFMigrationsHistory'; 
+[ 2022-09-25 20:09:55.261 -05:00 INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`; 
+[ 2022-09-25 20:09:55.294 -05:00 INF] No migrations were applied. The database is already up to date. 
+[ 2022-09-25 20:09:55.710 -05:00 INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Marca` AS `m`) 
+[ 2022-09-25 20:09:55.722 -05:00 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categoria` AS `c`) 
+[ 2022-09-25 20:09:55.728 -05:00 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Producto` AS `p`) 
+[ 2022-09-25 20:09:55.735 -05:00 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Rol` AS `r`) 
+[ 2022-09-25 20:09:55.871 -05:00 INF] User profile is available. Using 'C:\Users\bryan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[ 2022-09-25 20:09:56.034 -05:00 INF] Now listening on: https://localhost:5001 
+[ 2022-09-25 20:09:56.036 -05:00 INF] Now listening on: http://localhost:5000 
+[ 2022-09-25 20:09:56.045 -05:00 INF] Application started. Press Ctrl+C to shut down. 
+[ 2022-09-25 20:09:56.048 -05:00 INF] Hosting environment: Development 
+[ 2022-09-25 20:09:56.050 -05:00 INF] Content root path: D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\ 
+[ 2022-09-25 20:10:10.330 -05:00 INF] Request starting HTTP/1.1 GET https://localhost:5001/api/productos/280 - - 
+[ 2022-09-25 20:10:10.711 -05:00 INF] Failed to validate the token. 
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 00:21:43', Current time: '26/09/2022 01:10:10'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[ 2022-09-25 20:10:10.909 -05:00 INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 00:21:43', Current time: '26/09/2022 01:10:10'. 
+[ 2022-09-25 20:10:10.917 -05:00 INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Administrador) 
+[ 2022-09-25 20:10:10.927 -05:00 INF] AuthenticationScheme: Bearer was challenged. 
+[ 2022-09-25 20:10:10.939 -05:00 INF] Request finished HTTP/1.1 GET https://localhost:5001/api/productos/280 - - - 401 0 - 612.1215ms 
+[ 2022-09-25 20:10:16.351 -05:00 INF] Request starting HTTP/1.1 POST https://localhost:5001/api/usuario/login application/json 66 
+[ 2022-09-25 20:10:16.361 -05:00 INF] Failed to validate the token. 
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 00:21:43', Current time: '26/09/2022 01:10:16'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[ 2022-09-25 20:10:16.361 -05:00 INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 00:21:43', Current time: '26/09/2022 01:10:16'. 
+[ 2022-09-25 20:10:16.367 -05:00 INF] Executing endpoint 'API.Controllers.UsuarioController.GetTokenAsync (API)' 
+[ 2022-09-25 20:10:16.395 -05:00 INF] Route matched with {action = "GetToken", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetTokenAsync(API.Dtos.LoginDto) on controller API.Controllers.UsuarioController (API). 
+[ 2022-09-25 20:10:16.450 -05:00 INF] Entity Framework Core 6.0.9 initialized 'TiendaContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.2' with options: ServerVersion 8.0.28-mysql  
+[ 2022-09-25 20:10:16.803 -05:00 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'. 
+[ 2022-09-25 20:10:16.910 -05:00 INF] Executed DbCommand (30ms) [Parameters=[@__ToLower_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`ApellidoMaterno`, `t`.`ApellidoPaterno`, `t`.`Email`, `t`.`Nombres`, `t`.`Password`, `t`.`Username`, `t0`.`UsuarioId`, `t0`.`RolId`, `t0`.`Id`, `t0`.`Nombre`, `r0`.`Id`, `r0`.`Created`, `r0`.`Expires`, `r0`.`Revoked`, `r0`.`Token`, `r0`.`UsuarioId`
+FROM (
+    SELECT `u`.`Id`, `u`.`ApellidoMaterno`, `u`.`ApellidoPaterno`, `u`.`Email`, `u`.`Nombres`, `u`.`Password`, `u`.`Username`
+    FROM `Usuario` AS `u`
+    WHERE LOWER(`u`.`Username`) = @__ToLower_0
+    LIMIT 1
+) AS `t`
+LEFT JOIN (
+    SELECT `u0`.`UsuarioId`, `u0`.`RolId`, `r`.`Id`, `r`.`Nombre`
+    FROM `UsuarioRoles` AS `u0`
+    INNER JOIN `Rol` AS `r` ON `u0`.`RolId` = `r`.`Id`
+) AS `t0` ON `t`.`Id` = `t0`.`UsuarioId`
+LEFT JOIN `RefreshToken` AS `r0` ON `t`.`Id` = `r0`.`UsuarioId`
+ORDER BY `t`.`Id`, `t0`.`UsuarioId`, `t0`.`RolId`, `t0`.`Id` 
+[ 2022-09-25 20:10:17.116 -05:00 INF] Executing OkObjectResult, writing value of type 'API.Dtos.DatoUsuarioDto'. 
+[ 2022-09-25 20:10:17.137 -05:00 INF] Executed action API.Controllers.UsuarioController.GetTokenAsync (API) in 736.0914ms 
+[ 2022-09-25 20:10:17.139 -05:00 INF] Executed endpoint 'API.Controllers.UsuarioController.GetTokenAsync (API)' 
+[ 2022-09-25 20:10:17.147 -05:00 INF] Request finished HTTP/1.1 POST https://localhost:5001/api/usuario/login application/json 66 - 200 - application/json;+charset=utf-8 796.5654ms 
+[ 2022-09-25 20:10:19.751 -05:00 INF] Request starting HTTP/1.1 GET https://localhost:5001/api/productos/280 - - 
+[ 2022-09-25 20:10:19.771 -05:00 INF] Executing endpoint 'API.Controllers.ProductosController.Get (API)' 
+[ 2022-09-25 20:10:19.774 -05:00 INF] Route matched with {action = "Get", controller = "Productos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[API.Dtos.ProductoDto]] Get(Int32) on controller API.Controllers.ProductosController (API). 
+[ 2022-09-25 20:10:19.936 -05:00 INF] Estamos en el constructor de 'ProductosController' 
+[ 2022-09-25 20:10:19.990 -05:00 INF] Entity Framework Core 6.0.9 initialized 'TiendaContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.2' with options: ServerVersion 8.0.28-mysql  
+[ 2022-09-25 20:10:20.020 -05:00 INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`CategoriaId`, `p`.`FechaCreacion`, `p`.`MarcaId`, `p`.`Nombre`, `p`.`Precio`, `m`.`Id`, `m`.`Nombre`, `c`.`Id`, `c`.`Nombre`
+FROM `Producto` AS `p`
+INNER JOIN `Marca` AS `m` ON `p`.`MarcaId` = `m`.`Id`
+INNER JOIN `Categoria` AS `c` ON `p`.`CategoriaId` = `c`.`Id`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1 
+[ 2022-09-25 20:10:20.023 -05:00 INF] Executing NotFoundObjectResult, writing value of type 'API.Helpers.ApiResponse'. 
+[ 2022-09-25 20:10:20.026 -05:00 INF] Executed action API.Controllers.ProductosController.Get (API) in 251.9726ms 
+[ 2022-09-25 20:10:20.026 -05:00 INF] Executed endpoint 'API.Controllers.ProductosController.Get (API)' 
+[ 2022-09-25 20:10:20.027 -05:00 INF] Request finished HTTP/1.1 GET https://localhost:5001/api/productos/280 - - - 404 - application/json;+charset=utf-8 276.3445ms 
+[ 2022-09-25 20:32:41.815 -05:00 INF] Entity Framework Core 6.0.9 initialized 'TiendaContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.2' with options: ServerVersion 8.0.28-mysql  
+[ 2022-09-25 20:32:42.492 -05:00 INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='TiendaApi' AND TABLE_NAME='__EFMigrationsHistory'; 
+[ 2022-09-25 20:32:42.559 -05:00 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='TiendaApi' AND TABLE_NAME='__EFMigrationsHistory'; 
+[ 2022-09-25 20:32:42.620 -05:00 INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`; 
+[ 2022-09-25 20:32:42.654 -05:00 INF] No migrations were applied. The database is already up to date. 
+[ 2022-09-25 20:32:43.117 -05:00 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Marca` AS `m`) 
+[ 2022-09-25 20:32:43.131 -05:00 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categoria` AS `c`) 
+[ 2022-09-25 20:32:43.139 -05:00 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Producto` AS `p`) 
+[ 2022-09-25 20:32:43.147 -05:00 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Rol` AS `r`) 
+[ 2022-09-25 20:32:43.306 -05:00 INF] User profile is available. Using 'C:\Users\bryan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[ 2022-09-25 20:32:43.487 -05:00 INF] Now listening on: https://localhost:5001 
+[ 2022-09-25 20:32:43.489 -05:00 INF] Now listening on: http://localhost:5000 
+[ 2022-09-25 20:32:43.498 -05:00 INF] Application started. Press Ctrl+C to shut down. 
+[ 2022-09-25 20:32:43.500 -05:00 INF] Hosting environment: Development 
+[ 2022-09-25 20:32:43.503 -05:00 INF] Content root path: D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\ 
+[ 2022-09-25 20:33:37.530 -05:00 INF] Request starting HTTP/1.1 POST https://localhost:5001/api/usuario/login application/json 66 
+[ 2022-09-25 20:33:37.890 -05:00 INF] Failed to validate the token. 
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 01:11:17', Current time: '26/09/2022 01:33:37'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[ 2022-09-25 20:33:37.921 -05:00 INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 01:11:17', Current time: '26/09/2022 01:33:37'. 
+[ 2022-09-25 20:33:37.927 -05:00 INF] Executing endpoint 'API.Controllers.UsuarioController.GetTokenAsync (API)' 
+[ 2022-09-25 20:33:37.956 -05:00 INF] Route matched with {action = "GetToken", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetTokenAsync(API.Dtos.LoginDto) on controller API.Controllers.UsuarioController (API). 
+[ 2022-09-25 20:33:38.045 -05:00 INF] Entity Framework Core 6.0.9 initialized 'TiendaContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.2' with options: ServerVersion 8.0.28-mysql  
+[ 2022-09-25 20:33:38.401 -05:00 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'. 
+[ 2022-09-25 20:33:38.509 -05:00 INF] Executed DbCommand (27ms) [Parameters=[@__ToLower_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`ApellidoMaterno`, `t`.`ApellidoPaterno`, `t`.`Email`, `t`.`Nombres`, `t`.`Password`, `t`.`Username`, `t0`.`UsuarioId`, `t0`.`RolId`, `t0`.`Id`, `t0`.`Nombre`, `r0`.`Id`, `r0`.`Created`, `r0`.`Expires`, `r0`.`Revoked`, `r0`.`Token`, `r0`.`UsuarioId`
+FROM (
+    SELECT `u`.`Id`, `u`.`ApellidoMaterno`, `u`.`ApellidoPaterno`, `u`.`Email`, `u`.`Nombres`, `u`.`Password`, `u`.`Username`
+    FROM `Usuario` AS `u`
+    WHERE LOWER(`u`.`Username`) = @__ToLower_0
+    LIMIT 1
+) AS `t`
+LEFT JOIN (
+    SELECT `u0`.`UsuarioId`, `u0`.`RolId`, `r`.`Id`, `r`.`Nombre`
+    FROM `UsuarioRoles` AS `u0`
+    INNER JOIN `Rol` AS `r` ON `u0`.`RolId` = `r`.`Id`
+) AS `t0` ON `t`.`Id` = `t0`.`UsuarioId`
+LEFT JOIN `RefreshToken` AS `r0` ON `t`.`Id` = `r0`.`UsuarioId`
+ORDER BY `t`.`Id`, `t0`.`UsuarioId`, `t0`.`RolId`, `t0`.`Id` 
+[ 2022-09-25 20:33:38.706 -05:00 INF] Executing OkObjectResult, writing value of type 'API.Dtos.DatoUsuarioDto'. 
+[ 2022-09-25 20:33:38.729 -05:00 INF] Executed action API.Controllers.UsuarioController.GetTokenAsync (API) in 767.102ms 
+[ 2022-09-25 20:33:38.731 -05:00 INF] Executed endpoint 'API.Controllers.UsuarioController.GetTokenAsync (API)' 
+[ 2022-09-25 20:33:38.743 -05:00 INF] Request finished HTTP/1.1 POST https://localhost:5001/api/usuario/login application/json 66 - 200 - application/json;+charset=utf-8 1216.2724ms 
+[ 2022-09-25 20:33:40.355 -05:00 INF] Request starting HTTP/1.1 POST https://localhost:5001/api/usuario/register application/json 173 
+[ 2022-09-25 20:33:40.376 -05:00 INF] Executing endpoint 'API.Controllers.UsuarioController.RegisterAsync (API)' 
+[ 2022-09-25 20:33:40.378 -05:00 INF] Route matched with {action = "Register", controller = "Usuario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] RegisterAsync(API.Dtos.RegisterDto) on controller API.Controllers.UsuarioController (API). 
+[ 2022-09-25 20:33:40.393 -05:00 INF] Executing BadRequestObjectResult, writing value of type 'API.Helpers.Errors.ApiValidation'. 
+[ 2022-09-25 20:33:40.395 -05:00 INF] Executed action API.Controllers.UsuarioController.RegisterAsync (API) in 16.2537ms 
+[ 2022-09-25 20:33:40.395 -05:00 INF] Executed endpoint 'API.Controllers.UsuarioController.RegisterAsync (API)' 
+[ 2022-09-25 20:33:40.395 -05:00 INF] Request finished HTTP/1.1 POST https://localhost:5001/api/usuario/register application/json 173 - 400 - application/json;+charset=utf-8 40.2559ms 
+[ 2022-09-25 20:37:50.959 -05:00 INF] Entity Framework Core 6.0.9 initialized 'TiendaContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.2' with options: ServerVersion 8.0.28-mysql  
+[ 2022-09-25 20:37:51.622 -05:00 INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='TiendaApi' AND TABLE_NAME='__EFMigrationsHistory'; 
+[ 2022-09-25 20:37:51.688 -05:00 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='TiendaApi' AND TABLE_NAME='__EFMigrationsHistory'; 
+[ 2022-09-25 20:37:51.747 -05:00 INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`; 
+[ 2022-09-25 20:37:51.781 -05:00 INF] No migrations were applied. The database is already up to date. 
+[ 2022-09-25 20:37:52.188 -05:00 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Marca` AS `m`) 
+[ 2022-09-25 20:37:52.205 -05:00 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categoria` AS `c`) 
+[ 2022-09-25 20:37:52.216 -05:00 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Producto` AS `p`) 
+[ 2022-09-25 20:37:52.228 -05:00 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Rol` AS `r`) 
+[ 2022-09-25 20:37:52.387 -05:00 INF] User profile is available. Using 'C:\Users\bryan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[ 2022-09-25 20:37:52.559 -05:00 INF] Now listening on: https://localhost:5001 
+[ 2022-09-25 20:37:52.561 -05:00 INF] Now listening on: http://localhost:5000 
+[ 2022-09-25 20:37:52.570 -05:00 INF] Application started. Press Ctrl+C to shut down. 
+[ 2022-09-25 20:37:52.573 -05:00 INF] Hosting environment: Development 
+[ 2022-09-25 20:37:52.575 -05:00 INF] Content root path: D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\ 
+[ 2022-09-25 20:37:59.817 -05:00 INF] Request starting HTTP/1.1 POST https://localhost:5001/api/usuario/registerdd application/json 199 
+[ 2022-09-25 20:38:00.190 -05:00 INF] Failed to validate the token. 
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 01:34:38', Current time: '26/09/2022 01:38:00'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[ 2022-09-25 20:38:00.221 -05:00 INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 01:34:38', Current time: '26/09/2022 01:38:00'. 
+[ 2022-09-25 20:38:00.225 -05:00 INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 01:34:38', Current time: '26/09/2022 01:38:00'. 
+[ 2022-09-25 20:38:00.237 -05:00 INF] Request finished HTTP/1.1 POST https://localhost:5001/api/usuario/registerdd application/json 199 - 404 0 - 423.8922ms 
+[ 2022-09-25 20:38:11.443 -05:00 INF] Request starting HTTP/1.1 POST https://localhost:5001/api/usuario/registers application/json 199 
+[ 2022-09-25 20:38:11.448 -05:00 INF] Failed to validate the token. 
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 01:34:38', Current time: '26/09/2022 01:38:11'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[ 2022-09-25 20:38:11.448 -05:00 INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 01:34:38', Current time: '26/09/2022 01:38:11'. 
+[ 2022-09-25 20:38:11.449 -05:00 INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 01:34:38', Current time: '26/09/2022 01:38:11'. 
+[ 2022-09-25 20:38:11.449 -05:00 INF] Request finished HTTP/1.1 POST https://localhost:5001/api/usuario/registers application/json 199 - 404 0 - 6.1023ms 
+[ 2022-09-25 20:38:46.185 -05:00 INF] Request starting HTTP/1.1 GET https://localhost:5001/api/productoss/280 - - 
+[ 2022-09-25 20:38:46.192 -05:00 INF] Failed to validate the token. 
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 01:34:38', Current time: '26/09/2022 01:38:46'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[ 2022-09-25 20:38:46.192 -05:00 INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 01:34:38', Current time: '26/09/2022 01:38:46'. 
+[ 2022-09-25 20:38:46.193 -05:00 INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '26/09/2022 01:34:38', Current time: '26/09/2022 01:38:46'. 
+[ 2022-09-25 20:38:46.193 -05:00 INF] Request finished HTTP/1.1 GET https://localhost:5001/api/productoss/280 - - - 404 0 - 7.9507ms 
+[ 2022-09-25 20:40:07.866 -05:00 INF] Request starting HTTP/1.1 POST https://localhost:5001/api/weatherforecast - 0 
+[ 2022-09-25 20:40:07.868 -05:00 INF] Request finished HTTP/1.1 POST https://localhost:5001/api/weatherforecast - 0 - 404 0 - 4.9604ms 
+[ 2022-09-25 20:44:02.525 -05:00 INF] Entity Framework Core 6.0.9 initialized 'TiendaContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.2' with options: ServerVersion 8.0.28-mysql  
+[ 2022-09-25 20:44:03.232 -05:00 INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='TiendaApi' AND TABLE_NAME='__EFMigrationsHistory'; 
+[ 2022-09-25 20:44:03.305 -05:00 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='TiendaApi' AND TABLE_NAME='__EFMigrationsHistory'; 
+[ 2022-09-25 20:44:03.366 -05:00 INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`; 
+[ 2022-09-25 20:44:03.399 -05:00 INF] No migrations were applied. The database is already up to date. 
+[ 2022-09-25 20:44:03.805 -05:00 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Marca` AS `m`) 
+[ 2022-09-25 20:44:03.816 -05:00 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categoria` AS `c`) 
+[ 2022-09-25 20:44:03.823 -05:00 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Producto` AS `p`) 
+[ 2022-09-25 20:44:03.829 -05:00 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Rol` AS `r`) 
+[ 2022-09-25 20:44:03.972 -05:00 INF] User profile is available. Using 'C:\Users\bryan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+[ 2022-09-25 20:44:04.132 -05:00 INF] Now listening on: https://localhost:5001 
+[ 2022-09-25 20:44:04.134 -05:00 INF] Now listening on: http://localhost:5000 
+[ 2022-09-25 20:44:04.144 -05:00 INF] Application started. Press Ctrl+C to shut down. 
+[ 2022-09-25 20:44:04.146 -05:00 INF] Hosting environment: Development 
+[ 2022-09-25 20:44:04.148 -05:00 INF] Content root path: D:\Personal\Documentos\Visual Studio 2022\Projects\WebAPI\StoreAPICourse\API\ 
+[ 2022-09-25 20:44:06.136 -05:00 INF] Request starting HTTP/1.1 POST https://localhost:5001/api/weatherforecast - 0 
+[ 2022-09-25 20:44:06.303 -05:00 INF] Executing endpoint 'API.Controllers.ErrorsController.Error (API)' 
+[ 2022-09-25 20:44:06.326 -05:00 INF] Route matched with {action = "Error", controller = "Errors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Error(Int32) on controller API.Controllers.ErrorsController (API). 
+[ 2022-09-25 20:44:06.354 -05:00 INF] Executing ObjectResult, writing value of type 'API.Helpers.Errors.ApiResponse'. 
+[ 2022-09-25 20:44:06.379 -05:00 INF] Executed action API.Controllers.ErrorsController.Error (API) in 46.364ms 
+[ 2022-09-25 20:44:06.380 -05:00 INF] Executed endpoint 'API.Controllers.ErrorsController.Error (API)' 
+[ 2022-09-25 20:44:06.382 -05:00 INF] Request finished HTTP/1.1 POST https://localhost:5001/api/weatherforecast - 0 - 404 - application/json;+charset=utf-8 249.6593ms 

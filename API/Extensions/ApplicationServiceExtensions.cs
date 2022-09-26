@@ -1,4 +1,5 @@
 ﻿using API.Helpers;
+using API.Helpers.Errors;
 using API.Service;
 using Core.Entities;
 using Core.Interfaces;
@@ -6,6 +7,7 @@ using Infrastructure.Repositories;
 using Infrastructure.UnitOfWork;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -72,6 +74,26 @@ namespace API.Extensions
                     ValidIssuer = configuration["JWT:Issuer"],
                     ValidAudience = configuration["JWT:Audience"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Key"]))
+                };
+            });
+        }
+
+        public static void AddValidationsErros(this IServiceCollection services)
+        {
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.InvalidModelStateResponseFactory = actionContext =>
+                {
+                    var errors = actionContext.ModelState.Where(e => e.Value.Errors.Count > 0)
+                    .SelectMany(u => u.Value.Errors)
+                    .Select(u => u.ErrorMessage).ToArray();
+
+                    var errosReponse = new ApiValidation()
+                    {
+                        Errors = errors
+                    };
+
+                    return new BadRequestObjectResult(errosReponse);
                 };
             });
         }

@@ -1,4 +1,5 @@
 using API.Extensions;
+using API.Helpers.Errors;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -31,6 +32,10 @@ builder.Services.AddJwt(builder.Configuration);
 
 builder.Services.AddControllers();
 
+//
+builder.Services.AddValidationsErros();
+//
+
 //Inyección
 var serverVersion = new MySqlServerVersion(new Version(8,0,28));
 builder.Services.AddDbContext<TiendaContext>((options) =>
@@ -45,6 +50,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+//Agregar middleware que se encargará del manejo de excepciones
+//Esto nos permitirá manejar las excepiones de forma global.
+app.UseMiddleware<ExceptionMiddleware>();
+
+app.UseStatusCodePagesWithReExecute("/errors/{0}");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
